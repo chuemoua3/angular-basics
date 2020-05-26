@@ -7,13 +7,14 @@ function sayHello(person: string): string {
 
    // new Person class
    class Person{
-       firstName: string;
-       lastName: string;
-       age: number;
-       phoneNum: number;
-       state: string;
-       zipCode: number;
-       occupation: string;
+       private firstName: string;
+       private lastName: string;
+       private  age: number;
+       private  phoneNum: number;
+       private state: string;
+       private zipCode: number;
+       private occupation: string;
+       private hourly: number;
 
        constructor(firstName: string, lastName: string, age: number, phoneNum: number, state: string, zipCode: number, occupation: string){
            this.firstName = firstName;
@@ -75,6 +76,17 @@ function sayHello(person: string): string {
        setOccupation(occupation: string): void{
            this.occupation = occupation;
        }
+
+       //other methods
+
+       getFullName(): string{
+           return this.firstName + " " + this.lastName;
+       }
+       
+       getLocation(): string{
+           return this.state + " " + this.zipCode;
+       }
+
 
 
        
