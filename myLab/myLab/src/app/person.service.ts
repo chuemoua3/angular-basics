@@ -17,7 +17,7 @@ export class PersonService{
         return this.person;
     }
 
-    getPeople(): Observable<Person[]>{
+    getPeople(): Observable<any>{
         return of(this.person);
     }
 }
